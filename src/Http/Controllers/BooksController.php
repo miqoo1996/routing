@@ -5,9 +5,16 @@ namespace miqoo1996\routing\Http\Controllers;
 
 class BooksController
 {
-    public function retrieve()
-    {
+    private TestService $testService;
 
+    public function __construct(TestService $testService)
+    {
+        $this->testService = $testService;
+    }
+
+    public function retrieve(YourTestCalss $yourTestCalss)
+    {
+        var_dump($yourTestCalss, $this->testService);
     }
 
     public function store()

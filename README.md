@@ -28,22 +28,33 @@ Route::initializeRESTApi();
 
 Route::get('/book', [BooksController::class, 'retrieve']);
 Route::post('/book', [BooksController::class, 'store']);
-Route::delete('/book', [BooksController::class, 'delete']);
 Route::put('/book', [BooksController::class, 'update']);
 Route::patch('/book', [BooksController::class, 'update']);
+Route::delete('/book', [BooksController::class, 'delete']);
 
 ```
 
 ```php
 Controller Example
+
+namespace miqoo1996\routing\Http\Controllers;
+
+
 namespace miqoo1996\routing\Http\Controllers;
 
 
 class BooksController
 {
-    public function retrieve()
-    {
+    private TestService $testService;
 
+    public function __construct(TestService $testService)
+    {
+        $this->testService = $testService;
+    }
+
+    public function retrieve(YourTestCalss $yourTestCalss)
+    {
+        var_dump($yourTestCalss, $this->testService);
     }
 
     public function store()

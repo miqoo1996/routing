@@ -1,0 +1,33 @@
+{
+  "name": "miqoo1996/routing",
+  "type": "library",
+  "description": "PHP routing",
+  "keywords": [
+    "php",
+    "routing",
+    "Laravel routing",
+    "miqoo1996",
+    "Miqayel",
+    "Ishkhanyan",
+    "composer"
+  ],
+  "homepage": "http://imusthave.jermukcity.am",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Miqayel Ishkhanyan",
+      "email": "miqoo1996@gmail.com",
+      "homepage": "http://imusthave.jermukcity.am",
+      "role": "Developer"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "miqoo1996\\routing\\": "src/"
+    }
+  }
+}

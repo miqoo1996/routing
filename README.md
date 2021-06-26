@@ -37,8 +37,6 @@ Route::delete('/book', [BooksController::class, 'delete']);
 ```php
 Controller Example
 
-namespace miqoo1996\routing\Http\Controllers;
-
 
 namespace miqoo1996\routing\Http\Controllers;
 

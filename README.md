@@ -12,9 +12,9 @@ use miqoo1996\routing\Http\Controllers\ExampleController;
 
 Route::get('/', [ExampleController::class, 'welcomePage']);
 Route::post('/post', [ExampleController::class, 'post']);
-Route::delete('/delete', [ExampleController::class, 'delete']);
-Route::delete('/put', [ExampleController::class, 'put']);
+Route::put('/put', [ExampleController::class, 'put']);
 Route::patch('/patch', [ExampleController::class, 'patch']);
+Route::delete('/delete', [ExampleController::class, 'delete']);
 
 ```
 
@@ -26,10 +26,11 @@ use miqoo1996\routing\Http\Controllers\BooksController;
 
 Route::initializeRESTApi();
 
-Route::post('/book', [BooksController::class, 'store']);
 Route::get('/book', [BooksController::class, 'retrieve']);
+Route::post('/book', [BooksController::class, 'store']);
 Route::delete('/book', [BooksController::class, 'delete']);
 Route::put('/book', [BooksController::class, 'update']);
+Route::patch('/book', [BooksController::class, 'update']);
 
 ```
 
